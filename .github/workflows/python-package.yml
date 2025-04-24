@@ -28,11 +28,10 @@ jobs:
       fail-fast: false
       matrix:
         python-version: ['3.13']
-        os: ["blacksmith-4vcpu-ubuntu-2204"]
+        os: ["ubuntu-latest"]
 
     steps:
     - name: Install apt packages
-      if: startsWith(matrix.os, 'blacksmith-4vcpu-ubuntu')
       run: sudo apt-get update && sudo apt-get install libssl-dev
     - uses: actions/checkout@v4
     - name: Set up Python ${{ matrix.python-version }}
