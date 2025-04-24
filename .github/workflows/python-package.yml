@@ -6,12 +6,6 @@ name: Kombu
 on:
   push:
     branches: [ 'main']
-    paths:
-        - '**.py'
-        - '**.txt'
-        - '.github/workflows/python-package.yml'
-        - '**.toml'
-        - "tox.ini"
   pull_request:
     branches: [ 'main' ]
     paths:
